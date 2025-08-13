@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(3, 3, 3, 0.5), rgba(0, 0, 0, 0.5)), url(../img/planeta.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.neon-text {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #fff;
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+
+    0% {
+        text-shadow:
+            0 0 2px #00f0ff,
+            0 0 5px #00f0ff,
+            0 0 10px #00f0ff,
+            0 0 20px #00f0ff,
+            0 0 40px #00f0ff;
+    }
+    100% {
+        text-shadow:
+            0 0 5px #00f0ff,
+            0 0 10px #00f0ff,
+            0 0 20px #00f0ff,
+            0 0 40px #00f0ff,
+            0 0 80px #00f0ff;
+    }
+}
+
+.animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.cubo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    animation: cubeRotate 8s infinite linear;
+}
+
+.cubo-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #4ecdc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px #4ecdc4;
+}
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+.rigth {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+
+@keyframes cubeRotate {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+    }
+}
+
+p {
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+   color: #fff;
+}

@@ -13,7 +13,7 @@ body {
     align-items: center;
     font-family: 'Arial', sans-serif;
     overflow: hidden;
-    background-image: linear-gradient(rgba(3, 3, 3, 0.5), rgba(0, 0, 0, 0.5)), url(../img/planeta.jpg);
+    background-image: linear-gradient(rgba(3, 3, 3, 0.5), rgba(0, 0, 0, 0.5)), url(../img/planeta.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
